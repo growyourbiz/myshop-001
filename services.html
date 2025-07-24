@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>บริการจัดส่งฟรี</title>
+  <meta name="description" content="A simple responsive one-column image gallery." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="My Responsive Gallery" />
+  <meta property="og:description" content="A simple responsive one-column image gallery." />
+  <meta property="og:type" content="website" />
+  <!-- TODO: เปลี่ยน URL ให้เป็นของคุณเอง -->
+  <meta property="og:url" content="https://your-username.github.io/image-gallery/" />
+  <!-- TODO: อัปโหลดภาพ feature.webp (1200x630) ไปไว้ใน /images และเปลี่ยน URL ให้ถูกต้อง -->
+  <meta property="og:image" content="https://your-username.github.io/image-gallery/images/feature.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Responsive Gallery" />
+  <meta name="twitter:description" content="A simple responsive one-column image gallery." />
+  <meta name="twitter:image" content="https://your-username.github.io/image-gallery/images/feature.webp" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center; padding: 10px;">
+  </div>
+  <div class="gallery">
+    <img src="images/serviceDelivery-002.webp" alt="น้ำแพ๊คจัดส่งฟรี">
+    
+    
+    
+  </div>
+
+<script>
+  const version = "202507241246"; // ปรับทุกครั้งที่ deploy ใหม่
+
+  function appendVersion(el, attr) {
+    const url = el.getAttribute(attr);
+    if (
+      url &&
+      !url.startsWith("http") && // ป้องกัน CDN ภายนอก เช่น Google Fonts
+      !url.includes("?v=")
+    ) {
+      el.setAttribute(attr, url + "?v=" + version);
+    }
+  }
+
+  // รูปภาพ <img src="">
+  document.querySelectorAll("img").forEach(img => appendVersion(img, "src"));
+
+  // ไฟล์ CSS <link rel="stylesheet" href="">
+  document.querySelectorAll('link[rel="stylesheet"]').forEach(link => appendVersion(link, "href"));
+
+  // ไฟล์ JS <script src="">
+  document.querySelectorAll('script[src]').forEach(script => appendVersion(script, "src"));
+</script>
+
+
+</body>
+</html>
+
