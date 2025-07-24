@@ -49,7 +49,7 @@
 </head>
 <body>
   <div style="text-align: center; padding: 10px;">
-    <h1>เมนูอาหารป่าล่าสุด</h1>
+    <h1>เมนูอาหารป่าสดมาก</h1>
   </div>
   <div class="gallery">
     <img src="images/0001.webp" alt="Image 1">
@@ -62,19 +62,6 @@
     <img src="images/0008.webp" alt="Image 8">
     
   </div>
-<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(registrations => {
-        for (let reg of registrations) {
-          reg.unregister();
-        }
-      });
-    }
-    // Force reload with a timestamp
-    if (window.location.search.indexOf('v=') === -1) {
-      const ts = new Date().getTime();
-      window.location.search = '?v=' + ts;
-    }
-  </script>
+
 </body>
 </html>
