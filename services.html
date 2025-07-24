@@ -34,8 +34,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      flex-direction: column; /* จัดเรียงเนื้อหาเป็นคอลัมน์ */
-    justify-content: center; /* จัดเนื้อหาให้อยู่ตรงกลางตามแนวตั้ง */
+    
     }
     .gallery {
       display: flex;
@@ -49,16 +48,26 @@
       border-radius: 8px;
       display: block;
     }
+    .main-content-centered {
+    min-height: 100vh; /* ทำให้คอนเทนเนอร์มีความสูงเท่าหน้าจอ */
+    display: flex;
+    flex-direction: column; /* จัดเรียงเนื้อหาเป็นคอลัมน์ */
+    justify-content: center; /* จัดเนื้อหาให้อยู่ตรงกลางตามแนวตั้ง */
+    align-items: center; /* จัดเนื้อหาให้อยู่ตรงกลางตามแนวนอน */
+    width: 100%; /* ทำให้คอนเทนเนอร์มีความกว้างเต็ม */
+  }
   </style>
   
 </head>
 <body>
   <div style="text-align: center; padding: 10px;">
   </div>
-  <div class="gallery">
-    <img src="images/serviceDelivery-002.webp" alt="บริการจัดส่งฟรี"> 
-  </div>
 
+
+  <div class="main-content-centered">
+    <div class="gallery">
+      <img src="images/serviceDelivery-002.webp" alt="บริการจัดส่งฟรี">
+    </div>
 
 <script>
   const version = "202507241246"; // ปรับทุกครั้งที่ deploy ใหม่
